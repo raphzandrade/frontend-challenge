@@ -53,8 +53,8 @@ $ grunt jasmine
 
  ## Pendências e melhorias
 
- - Testes (incluir mais caso no existente e criar um teste para o server.js);
- - Performance do JS principal (Simplificação e reescrita).
+ - Testes (incluir mais casos no existente e um teste para o server.js);
+ - Simplificação e melhoria do main.js.
  - Criação dos scripts de máscara para os campos de cep e telefone.
  - Melhoria do server.js.
  - Melhoria no layout geral.
