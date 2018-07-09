@@ -56,7 +56,18 @@ function formBuilder(data) {
     const requestSubmitButton = document.createElement('button');
     requestSubmitButton.type = 'button';
     requestSubmitButton.addEventListener('click', () => {
-        changeTabs(requestFields, userFields);
+        var serviceType = document.getElementsByName('Qual será o serviço?')[0];
+        var dueTo = document.getElementsByName('Para quando você precisa deste serviço?')[0];
+
+        if(serviceType.checkValidity() && dueTo.checkValidity()) {          
+            changeTabs(requestFields, userFields);
+        } else {
+            var errorMsg1 = document.getElementsByClassName('errorMsg')[0];
+            var errorMsg2 = document.getElementsByClassName('errorMsg')[1];
+
+            showValidationErrorMsg(serviceType, errorMsg1);
+            showValidationErrorMsg(dueTo, errorMsg2);
+        }
     });
     requestSubmitButton.textContent = 'Buscar Profissionais';
     requestFields.appendChild(requestSubmitButton);
@@ -107,26 +118,25 @@ function insertField(element, tab) {
 
         case 'small_text': 
             input = document.createElement('input');
-
             input.classList.add('smallText');
             break;
 
     
         case 'cep':
             input = document.createElement('input');
-
+            input.setAttribute('pattern', '[0-9]{5}-?[0-9]{3}');
             // insert function to mask here
             break;
 
         case 'email':
             input = document.createElement('input');
-
             input.setAttribute('type', 'email');
             break;
 
         case 'phone':
             input = document.createElement('input');
-
+            input.setAttribute('type', 'tel');
+            input.setAttribute('pattern', '^[0-9-+s()]*$');
             // insert function to mask here
             break;
     };
