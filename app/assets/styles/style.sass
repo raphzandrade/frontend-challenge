@@ -53,6 +53,15 @@ body
                     font-weight: bold
                     font-size: 15px
                     padding: 15px 0px 6px
+                .errorMsg 
+                    color: red 
+                    text-align: left
+                    display: none
+                    width: 100%
+                    font-size: 12px
+                    margin: 5px 0px
+                    &.invalid 
+                        display: block
                 select, input 
                     width: 100%
                     min-height: 50px
@@ -65,6 +74,8 @@ body
                         background-color: #fff
                         box-shadow: $inpt-hover-shadow
                         -webkit-box-shadow: $inpt-hover-shadow
+                    &.invalid 
+                        border-color: red
                 select 
                     height: 45px
                 .bigText 

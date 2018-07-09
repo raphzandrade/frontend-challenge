@@ -55,7 +55,7 @@ function formBuilder(data) {
     
     const requestSubmitButton = document.createElement('button');
     requestSubmitButton.type = 'button';
-    requestSubmitButton.addEventListener('click', function () {
+    requestSubmitButton.addEventListener('click', () => {
         changeTabs(requestFields, userFields);
     });
     requestSubmitButton.textContent = 'Buscar Profissionais';
@@ -85,6 +85,11 @@ function insertField(element, tab) {
     switch (element.type) {
         case 'enumerable':
             input = document.createElement('select');
+
+            const mask = document.createElement('option');
+            mask.text = element.mask;
+            mask.value = "";
+            input.add(mask);
 
             Object.keys(element.values).forEach(value => {
                 const option = document.createElement('option');
@@ -135,18 +140,26 @@ function insertField(element, tab) {
     };
 
     if (element.required) {
-        input.required = true;
-    };
+        var errorMsg = document.createElement('span');
+        errorMsg.classList.add('errorMsg');
+        errorMsg.textContent = 'Este campo é requerido'
+        inputWrapper.appendChild(errorMsg);
 
+        input.required = true;
+
+        input.addEventListener('blur', () => {
+            showValidationErrorMsg(input, errorMsg);
+        });
+    };
 
     inputWrapper.appendChild(input);
     tab.appendChild(inputWrapper);
-}
+};
 
 function changeTabs(activeTab, newTab) {
     activeTab.classList.remove('active'); 
     newTab.classList.add('active');
-}
+};
 
 function error() {
     var form = document.createElement('form');
@@ -158,4 +171,14 @@ function error() {
     
     var body = document.getElementsByTagName('body')[0];
     body.appendChild(error)
-}
+};
+
+function showValidationErrorMsg(input, errorMsg) {
+    if (!input.checkValidity()) {
+        errorMsg.classList.add('invalid');
+        input.classList.add('invalid');
+    } else {
+        errorMsg.classList.remove('invalid');
+        input.classList.remove('invalid');
+    }
+};
