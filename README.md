@@ -1,31 +1,59 @@
-# Pré-requisitos
+# Front-end Challenge 
 
-Não é permitido o uso de nenhuma biblioteca ou framework externo. Tudo será feito com [Vanilla.js](http://vanilla-js.com/).
+Desafio proposto pela GetNinjas como parte do processo seletivo para a vaga de desenvolvedor front-end. :)
 
-Não utilize nenhuma biblioteca de CSS externa, mas você pode utilizar qualquer metodologia de arquitetura de código.
+## Dependências
+- [grunt](https://gruntjs.com/);
+- [node & npm](https://nodejs.org/en/);
+- [ruby](https://www.ruby-lang.org/pt/downloads/);
+- [sass](https://www.npmjs.com/package/sass);
 
-Se preferir, o uso de Sass é liberado, contanto que seu uso seja justificável.
+## Como fazer rodar a aplicação
 
-O uso de ferramentas de teste é liberado.
+- Clone o repositório 
+`
+$ git clone -endereço-
+ `
 
-O objetivo desse teste é avaliar:
-- organização;
-- semântica;
-- uso e abuso das features das linguagens (HTML, CSS e JS);
-- uso de patterns;
-- performance do código;
-- testes de JavaScript.
+ - Entre na pasta do projeto 
+ `
+ $ cd frontend-challenge/app/
+ `
 
-# Teste
+ - Inicie o servidor node
+`
+$ node server.js
+`
 
-Você precisará criar um servidor, em Node.JS, pra servir o `fields.json`, que está na raiz do projeto, como uma API.
+- Abra o navegador e entre no endereço
+`
+http://localhost:4200/
+`
 
-O formulário a ser renderizado é o de pedidos, da forma que é exibido [aqui](https://www.getninjas.com.br/moda-e-beleza/cabeleireiros). Através do `fields.json` você precisará montar os campos na view.
+## Como rodar os testes unitários 
 
-# Informações adicionais
+Para rodar os testes unitários basta digitar o seguinte comando dentro da pasta do projeto: 
 
-- É necessário exibir a mensagem "este campo é requerido" para os marcados como `required: true`;
-- Campos do tipo `enumerable` são `select`;
-- O formulário não precisa fazer `POST`;
-- Temos uma cultura de testes unitários e de integração. Uma dessas formas, pelo menos, é essencial pra esse teste;
-- Se quiser, faça uma rota no Node.js pra exibir o formulário num HTML.
+`
+$ grunt jasmine
+`
+
+## Para desenvolver 
+ 
+ Neste projeto foi utilizado o grunt para compactação de html e Javascript, assim como para compilar os arquivos SASS (que facilitam muito a escrita e manutenção).
+
+ Para manter o grunt compilando as novas modificações realizadas, utilize o seguinte comando: 
+
+ `
+ grunt watch
+ `
+
+ Enquanto o grunt estiver realizando a tarefa, todas alterações realizadas serão automaticamente compiladas/compactadas para os arquivos de destino.
+
+
+ ## O que falta
+
+ Alguns pontos ainda podem ser muito melhorados no projeto, entre eles: 
+
+ - Testes;
+ - Performance do JS principal.

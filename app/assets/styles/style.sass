@@ -1,0 +1,66 @@
+@import 'variables'
+@import 'mixins'
+
+* 
+    color: $primary-color
+    font-family: $main-font
+body 
+    background: $body-color url('../images/homem_metro.png') no-repeat bottom right
+    #home 
+        max-width: 1200px
+        margin: 0 auto
+    .container 
+        min-height: 100vh
+        +flex(center, center, wrap, wrap)
+    #form 
+        +flex(center, center, column)
+        max-width: 600px
+        border: 1px solid $border-color
+        padding: 50px
+        border-radius: $border-radius
+        background-color: #fff
+        #requestFields, #userFields 
+            width: 100%
+            display: none
+            &.active 
+                display: block
+        .ninjaInput 
+            +flex(center, center, column)
+            height: auto
+            width: 100%
+            label
+                text-align: left
+                width: 100%
+                max-width: 200px 
+                color: $label-color
+                font-weight: bold
+                font-size: 15px
+                padding: 15px 0px 6px
+            select, input 
+                width: 100%
+                max-width: 200px 
+                min-height: 50px
+                border-radius: $border-radius
+                background-color: $inpt-bg-inactive
+                border: 1px solid $primary-color
+                padding: 3px 0px
+                &:hover 
+                    background-color: #fff
+                    box-shadow: $inpt-hover-shadow
+                    -webkit-box-shadow: $inpt-hover-shadow
+            select 
+                height: 45px
+            .bigText 
+                height: 64px
+        button 
+            background-color: $primary-color
+            color: #fff
+            width: 100%
+            box-shadow: 0 1px 1px 0 rgba(0,0,0,.2)
+            border: none
+            padding: 16px 32px
+            margin: 15px 0px
+            &:hover 
+                background-color: $primary-color-darker
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,.2)
+            

@@ -1,0 +1,32 @@
+{
+  "name": "frontend-challenge",
+  "version": "0.0.1",
+  "description": "Frontend Challenge",
+  "main": "gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raphzandrade/igglu.institucional.git"
+  },
+  "author": "Raphael Andrade",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raphzandrade/igglu.institucional/issues"
+  },
+  "homepage": "https://github.com/raphzandrade/igglu.institucional#readme",
+  "devDependencies": {
+    "grunt": "^1.0.2",
+    "grunt-contrib-htmlmin": "^2.4.0",
+    "grunt-contrib-jasmine": "^2.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-contrib-uglify-es": "^3.3.0",
+    "grunt-contrib-watch": "^1.1.0"
+  },
+  "dependencies": {
+    "grunt-sass": "^3.0.1",
+    "node-sass": "^4.9.1"
+  }
+}
