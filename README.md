@@ -1,18 +1,18 @@
 # Front-end Challenge 
 
-Desafio proposto pela GetNinjas como parte do processo seletivo para a vaga de desenvolvedor front-end. :)
+Desafio proposto pela GetNinjas como parte do processo seletivo para a vaga de desenvolvedor front-end. Repositório original [aqui](http://email.mg.kenoby.com/c/eJwVjcsOgyAURL9GdiXcK4ouWBhj_wPh8mgVjdJF-_XVZJKZszgZp1uQ6CVLGgV0QgmJcHXPgSMOUw8K1ARqxFFUUqyBvylv85fbbWVRO4stoQGUkjrllTDeuR6oIe-gbixbdCxlP6t6qPB5JaQSP_Nt30Alp_wy57X9seVC2T1sNMtCORA79GH2-OMmu8M4uu7DatJyy39ZWDg6). :)
 
 ## Dependências
 - [grunt](https://gruntjs.com/);
 - [node & npm](https://nodejs.org/en/);
-- [ruby](https://www.ruby-lang.org/pt/downloads/);
+- [ruby](https://www.ruby-lang.org/pt/downloads/) (para compilar o SASS);
 - [sass](https://www.npmjs.com/package/sass);
 
 ## Como fazer rodar a aplicação
 
 - Clone o repositório 
 `
-$ git clone -endereço-
+$ git clone git@github.com:raphzandrade/frontend-challenge.git
  `
 
  - Entre na pasta do projeto 
@@ -51,9 +51,10 @@ $ grunt jasmine
  Enquanto o grunt estiver realizando a tarefa, todas alterações realizadas serão automaticamente compiladas/compactadas para os arquivos de destino.
 
 
- ## O que falta
+ ## Pendências e melhorias
 
- Alguns pontos ainda podem ser muito melhorados no projeto, entre eles: 
-
- - Testes;
- - Performance do JS principal.
+ - Testes (incluir mais caso no existente e criar um teste para o server.js);
+ - Performance do JS principal (Simplificação e reescrita).
+ - Criação dos scripts de máscara para os campos de cep e telefone.
+ - Melhoria do server.js.
+ - Melhoria no layout geral.
