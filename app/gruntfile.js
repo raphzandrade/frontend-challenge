@@ -50,8 +50,7 @@ module.exports = function(grunt) {
             test: {
                 src: 'assets/scripts/*.js',
                 options: {
-                  specs: 'tests/*.js',
-                  keepRunner: true
+                  specs: 'tests/*.js'
                 }
             }
         },
